@@ -84,7 +84,7 @@ def algiter():
                     break
                 if isinstance(l, Literal) and l.value == 0 and op in (MUL, DIV):
                     break
-                if l == r and op == SUB:
+                if l == r and op in (SUB, DIV):
                     break
             else:
                 if isinstance(right, Literal) and right.value == 1 and op == DIV:
